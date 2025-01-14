@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-01-13T08:28:01 IST" name="Smoke Test Cases Suite" finished-at="2025-01-13T08:29:20 IST" duration-ms="79891">
+    <groups>
+      <group name="smoke">
+        <method signature="LoginTest.verifyLogin()[pri:0, instance:com.ecommerce.testCases.LoginTest@242b836]" name="verifyLogin" class="com.ecommerce.testCases.LoginTest"/>
+        <method signature="AddToCartTest.verifyAddToCart()[pri:0, instance:com.ecommerce.testCases.AddToCartTest@74d1dc36]" name="verifyAddToCart" class="com.ecommerce.testCases.AddToCartTest"/>
+        <method signature="CheckoutFromCartTest.checkoutItems()[pri:0, instance:com.ecommerce.testCases.CheckoutFromCartTest@663c9e7a]" name="checkoutItems" class="com.ecommerce.testCases.CheckoutFromCartTest"/>
+        <method signature="VerifyPaymentTest.verifyPayment(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.ecommerce.testCases.VerifyPaymentTest@d737b89]" name="verifyPayment" class="com.ecommerce.testCases.VerifyPaymentTest"/>
+      </group> <!-- smoke -->
+    </groups>
+    <test started-at="2025-01-13T08:28:01 IST" name="Verify Login Functionality" finished-at="2025-01-13T08:28:07 IST" duration-ms="6052">
+      <class name="com.ecommerce.testCases.LoginTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.ecommerce.testCases.LoginTest@242b836]" started-at="2025-01-13T08:28:01 IST" name="setup" finished-at="2025-01-13T08:28:04 IST" duration-ms="3668" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyLogin()[pri:0, instance:com.ecommerce.testCases.LoginTest@242b836]" started-at="2025-01-13T08:28:04 IST" name="verifyLogin" finished-at="2025-01-13T08:28:05 IST" duration-ms="763" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogin -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.ecommerce.testCases.LoginTest@242b836]" started-at="2025-01-13T08:28:05 IST" name="teardown" finished-at="2025-01-13T08:28:07 IST" duration-ms="1550" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.ecommerce.testCases.LoginTest -->
+    </test> <!-- Verify Login Functionality -->
+    <test started-at="2025-01-13T08:28:07 IST" name="Adding Item(s) to Cart Test" finished-at="2025-01-13T08:28:22 IST" duration-ms="15270">
+      <class name="com.ecommerce.testCases.AddToCartTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.ecommerce.testCases.AddToCartTest@74d1dc36]" started-at="2025-01-13T08:28:07 IST" name="setup" finished-at="2025-01-13T08:28:10 IST" duration-ms="3328" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyAddToCart()[pri:0, instance:com.ecommerce.testCases.AddToCartTest@74d1dc36]" started-at="2025-01-13T08:28:10 IST" name="verifyAddToCart" finished-at="2025-01-13T08:28:21 IST" duration-ms="10612" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAddToCart -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.ecommerce.testCases.AddToCartTest@74d1dc36]" started-at="2025-01-13T08:28:21 IST" name="teardown" finished-at="2025-01-13T08:28:22 IST" duration-ms="1326" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.ecommerce.testCases.AddToCartTest -->
+    </test> <!-- Adding Item(s) to Cart Test -->
+    <test started-at="2025-01-13T08:28:22 IST" name="Checkout Item(s) from Cart Test" finished-at="2025-01-13T08:28:39 IST" duration-ms="16619">
+      <class name="com.ecommerce.testCases.CheckoutFromCartTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.ecommerce.testCases.CheckoutFromCartTest@663c9e7a]" started-at="2025-01-13T08:28:22 IST" name="setup" finished-at="2025-01-13T08:28:36 IST" duration-ms="14114" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="checkoutItems()[pri:0, instance:com.ecommerce.testCases.CheckoutFromCartTest@663c9e7a]" started-at="2025-01-13T08:28:36 IST" name="checkoutItems" finished-at="2025-01-13T08:28:37 IST" duration-ms="1168" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkoutItems -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.ecommerce.testCases.CheckoutFromCartTest@663c9e7a]" started-at="2025-01-13T08:28:37 IST" name="teardown" finished-at="2025-01-13T08:28:39 IST" duration-ms="1333" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.ecommerce.testCases.CheckoutFromCartTest -->
+    </test> <!-- Checkout Item(s) from Cart Test -->
+    <test started-at="2025-01-13T08:28:39 IST" name="Verify Payment Test" finished-at="2025-01-13T08:28:57 IST" duration-ms="18527">
+      <class name="com.ecommerce.testCases.VerifyPaymentTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.ecommerce.testCases.VerifyPaymentTest@d737b89]" started-at="2025-01-13T08:28:39 IST" name="setup" finished-at="2025-01-13T08:28:55 IST" duration-ms="15499" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyPayment(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.ecommerce.testCases.VerifyPaymentTest@d737b89]" started-at="2025-01-13T08:28:55 IST" name="verifyPayment" data-provider="paymentDetails" finished-at="2025-01-13T08:28:56 IST" duration-ms="1210" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[000 111 222 333]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[india]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPayment -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.ecommerce.testCases.VerifyPaymentTest@d737b89]" started-at="2025-01-13T08:28:56 IST" name="teardown" finished-at="2025-01-13T08:28:57 IST" duration-ms="1347" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.ecommerce.testCases.VerifyPaymentTest -->
+    </test> <!-- Verify Payment Test -->
+    <test started-at="2025-01-13T08:28:57 IST" name="Delete Items from Cart Test" finished-at="2025-01-13T08:29:14 IST" duration-ms="16708">
+      <class name="com.ecommerce.testCases.DeleteItemsFromCartTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.ecommerce.testCases.DeleteItemsFromCartTest@3f191845]" started-at="2025-01-13T08:28:57 IST" name="setup" finished-at="2025-01-13T08:29:11 IST" duration-ms="13981" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyDeleteItems()[pri:0, instance:com.ecommerce.testCases.DeleteItemsFromCartTest@3f191845]" started-at="2025-01-13T08:29:11 IST" name="verifyDeleteItems" finished-at="2025-01-13T08:29:13 IST" duration-ms="1364" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDeleteItems -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.ecommerce.testCases.DeleteItemsFromCartTest@3f191845]" started-at="2025-01-13T08:29:13 IST" name="teardown" finished-at="2025-01-13T08:29:14 IST" duration-ms="1361" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.ecommerce.testCases.DeleteItemsFromCartTest -->
+    </test> <!-- Delete Items from Cart Test -->
+    <test started-at="2025-01-13T08:29:14 IST" name="Register User Test" finished-at="2025-01-13T08:29:20 IST" duration-ms="6277">
+      <class name="com.ecommerce.testCases.RegisterUserTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.ecommerce.testCases.RegisterUserTest@909217e]" started-at="2025-01-13T08:29:14 IST" name="setup" finished-at="2025-01-13T08:29:17 IST" duration-ms="2646" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="validateRegisterUser()[pri:0, instance:com.ecommerce.testCases.RegisterUserTest@909217e]" started-at="2025-01-13T08:29:17 IST" name="validateRegisterUser" finished-at="2025-01-13T08:29:19 IST" duration-ms="2164" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateRegisterUser -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.ecommerce.testCases.RegisterUserTest@909217e]" started-at="2025-01-13T08:29:19 IST" name="teardown" finished-at="2025-01-13T08:29:20 IST" duration-ms="1464" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.ecommerce.testCases.RegisterUserTest -->
+    </test> <!-- Register User Test -->
+  </suite> <!-- Smoke Test Cases Suite -->
+</testng-results>

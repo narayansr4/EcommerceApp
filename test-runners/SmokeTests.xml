@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Smoke Test Cases Suite" parallel="tests" thread-count="1" verbose="2">
+
+    <listeners>
+        <listener class-name="com.ecommerce.testComponents.Listeners"/>
+    </listeners>
+
+    <test name="Verify Login Functionality">
+        <classes>
+            <class name="com.ecommerce.testCases.LoginTest"/>
+        </classes>
+    </test>
+    <test name="Adding Item(s) to Cart Test">
+        <classes>
+            <class name="com.ecommerce.testCases.AddToCartTest"/>
+        </classes>
+    </test>
+    <test name="Checkout Item(s) from Cart Test">
+        <classes>
+            <class name="com.ecommerce.testCases.CheckoutFromCartTest"/>
+        </classes>
+    </test>
+    <test name="Verify Payment Test">
+        <classes>
+            <class name="com.ecommerce.testCases.VerifyPaymentTest"/>
+        </classes>
+    </test>
+
+    <test name="Delete Items from Cart Test">
+        <classes>
+            <class name="com.ecommerce.testCases.DeleteItemsFromCartTest"/>
+        </classes>
+    </test>
+
+    <test name="Register User Test">
+        <classes>
+            <class name="com.ecommerce.testCases.RegisterUserTest"/>
+        </classes>
+    </test>
+
+</suite>
