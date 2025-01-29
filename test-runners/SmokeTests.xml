@@ -33,6 +33,12 @@
         </classes>
     </test>
 
+    <test name="Sign Out User Test">
+        <classes>
+            <class name="com.ecommerce.testCases.SignOutTest"/>
+        </classes>
+    </test>
+
     <test name="Register User Test">
         <classes>
             <class name="com.ecommerce.testCases.RegisterUserTest"/>
