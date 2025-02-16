@@ -1,13 +1,16 @@
 package com.ecommerce.pages;
 
 import com.ecommerce.base.Base;
-import org.openqa.selenium.WebDriver;
+import com.ecommerce.driver.Driver;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage extends Base {
+    Actions a = new Actions(Driver.getDriver());
+    JavascriptExecutor js = (JavascriptExecutor)Driver.getDriver();
 
     @FindBy(css = "input#userEmail")
     private WebElement email;
@@ -28,11 +31,11 @@ public class LoginPage extends Base {
     public WebElement forgotPasswordlink;
 
     public LoginPage(){
-        PageFactory.initElements(getDriver(),this);
+        PageFactory.initElements(Driver.getDriver(),this);
     }
 
     public String getTitle(){
-        return dr.get().getTitle();
+        return Driver.getDriver().getTitle();
     }
 
     public HomePage login(String email, String password){

@@ -1,10 +1,11 @@
 package com.ecommerce.pages;
 
 import com.ecommerce.base.Base;
+import com.ecommerce.driver.Driver;
 import com.ecommerce.testDatas.TestData;
 import com.ecommerce.utils.Utilities;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -13,6 +14,8 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 
 public class HomePage extends Base {
+    Actions a = new Actions(Driver.getDriver());
+    JavascriptExecutor js = (JavascriptExecutor)Driver.getDriver();
 
     @FindBy(xpath = "//div[@class='card-body'] //h5/b")
     List<WebElement> productNames;
@@ -30,18 +33,17 @@ public class HomePage extends Base {
     WebElement successMsg;
 
     public HomePage(){
-        PageFactory.initElements(getDriver(),this);
+        PageFactory.initElements(Driver.getDriver(),this);
     }
 
     public void addToCart()  {
-
         Utilities.invisibilityOfElement(successMsg);
         for (int i = 0; i < productNames.size(); i++){
             if (TestData.productsToAdd.contains(productNames.get(i).getText())){
                 //Utilities.visibilityOfElement(addToCartButtons.get(i));
                 js.executeScript("arguments[0].scrollIntoView(true);",addToCartButtons.get(i));
                 Utilities.visibilityOfElement(addToCartButtons.get(i));
-               // a.scrollToElement(addToCartButtons.get(i)).build().perform();
+                // a.scrollToElement(addToCartButtons.get(i)).build().perform();
                 //a.moveToElement(addToCartButtons.get(i)).click().build().perform();
                 try {
                     Thread.sleep(1000);
@@ -58,12 +60,27 @@ public class HomePage extends Base {
             }
 
         }
+        //Utilities.visibilityOfElement(Utilities.cartBtn);
+        //js.executeScript("arguments[0].scrollIntoView(true);",Utilities.cartBtn);
 
-        a.scrollToElement(Utilities.cartBtn).build().perform();
-        a.moveToElement(Utilities.cartBtn).build().perform();
+        //a.scrollToElement(Utilities.cartBtn).build().perform();
+        //a.moveToElement(Utilities.cartBtn).build().perform();
+    }
+
+    public void scrollToCartIcon(){
+
+        a.sendKeys(Keys.HOME).build().perform();
+        a.sendKeys(Keys.PAGE_UP).build().perform();
+        try {
+            Thread.sleep(200);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public CartPage goToCartPage(){
+
+        Utilities.visibilityOfElement(Utilities.cartBtn);
         Utilities.cartBtn.click();
         try {
             Thread.sleep(1000);

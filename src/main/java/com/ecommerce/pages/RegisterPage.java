@@ -1,8 +1,8 @@
 package com.ecommerce.pages;
 
 import com.ecommerce.base.Base;
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.WebDriver;
+import com.ecommerce.driver.Driver;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -10,6 +10,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 public class RegisterPage extends Base {
+    Actions a = new Actions(Driver.getDriver());
+    JavascriptExecutor js = (JavascriptExecutor)Driver.getDriver();
     @FindBy(id="firstName")
     WebElement firstName;
 
@@ -53,7 +55,7 @@ public class RegisterPage extends Base {
     public WebElement successText;
 
     public RegisterPage() {
-        PageFactory.initElements(getDriver(), this);
+        PageFactory.initElements(Driver.getDriver(), this);
     }
 
     public void setOccupationDropdown(String occupation){
@@ -72,7 +74,7 @@ public class RegisterPage extends Base {
 
     public void registerUser(String fname, String lname, String email, String number, String occupation,String gender, String password, String confirmPassword){
 
-        dr.get().manage().window().fullscreen();
+        Driver.getDriver().manage().window().fullscreen();
 
         firstName.sendKeys(fname);
         lastName.sendKeys(lname);
@@ -84,6 +86,7 @@ public class RegisterPage extends Base {
         this.confirmPassword.sendKeys(confirmPassword);
         confirmAgeCheckbox.click();
         a.moveToElement(registerBtn).click().build().perform();
+        //System.out.println("Register btn clicked");
         //registerBtn.click();
 
     }

@@ -13,21 +13,15 @@ public class RegisterUserWithInvalidNumber extends Base {
     public RegisterUserWithInvalidNumber(){
         super();
     }
-    @BeforeMethod(alwaysRun = true)
-    public void setup(){
-        initialize();
-        loginPage = new LoginPage();
-        registerPage = loginPage.clickOnRegisterLink();
-    }
 
     @Test
     public void validateRegisterUser(){
+        loginPage = new LoginPage();
+        registerPage = loginPage.clickOnRegisterLink();
+
         registerPage.registerUser(Utilities.generateAlphabetsString(), Utilities.generateAlphabetsString(),  Utilities.generateAlphabetsString() + "@gmail.com", Utilities.generateNumbersString(),"Doctor","male","Password513@","Password513@");
         Assert.assertTrue(registerPage.phnNumberValidationMsg.isDisplayed());
     }
 
-    @AfterMethod(alwaysRun = true)
-    public void teardown(){
-        close();
-    }
+
 }

@@ -1,7 +1,8 @@
 package com.ecommerce.pages;
 
 import com.ecommerce.base.Base;
-import org.openqa.selenium.WebDriver;
+import com.ecommerce.driver.Driver;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -11,9 +12,11 @@ import org.openqa.selenium.support.ui.Select;
 import java.util.List;
 
 public class PaymentPage extends Base {
+    Actions a = new Actions(Driver.getDriver());
+    JavascriptExecutor js = (JavascriptExecutor)Driver.getDriver();
 
     @FindBy(xpath = "//div[@class='payment']/div[1]")
-     public WebElement paymentLabel;
+    public WebElement paymentLabel;
 
     @FindBy(xpath="//div[@class='payment__cc'] //input[@class='input txt text-validated']")
     public static WebElement cardNumber;
@@ -55,7 +58,7 @@ public class PaymentPage extends Base {
     public WebElement successMsg;
 
     public PaymentPage() {
-        PageFactory.initElements(getDriver(), this);
+        PageFactory.initElements(Driver.getDriver(), this);
     }
 
     public void selectMonth(String month){
@@ -68,7 +71,7 @@ public class PaymentPage extends Base {
         Select dd = new Select(dayDropdown);
         dd.selectByVisibleText(day);
     }
-    
+
     public void selectCountry(String country){
         this.country.sendKeys(country);
         for (WebElement countryName : countryNames) {

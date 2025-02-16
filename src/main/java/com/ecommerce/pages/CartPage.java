@@ -1,25 +1,29 @@
 package com.ecommerce.pages;
 
 import com.ecommerce.base.Base;
+import com.ecommerce.driver.Driver;
 import com.ecommerce.testDatas.TestData;
 import com.ecommerce.utils.Utilities;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class CartPage extends Base {
+    Actions a = new Actions(Driver.getDriver());
+    JavascriptExecutor js = (JavascriptExecutor)Driver.getDriver();
+
+    List<String> names = new ArrayList<>();
 
     @FindBy(xpath = "//div[@class='heading cf']/button")
     WebElement continueShoppingButton;
 
     @FindBy(xpath = "//div[@class='cartSection']/h3")
-    List<WebElement> productNames;
+    public List<WebElement> productNames;
 
     @FindBy(xpath = "//button[@class='btn btn-danger']")
     List<WebElement> deleteButtons;
@@ -40,9 +44,16 @@ public class CartPage extends Base {
     public static WebElement noItemsInCartText;
 
     public CartPage(){
-        PageFactory.initElements(getDriver(),this);
+        PageFactory.initElements(Driver.getDriver(),this);
     }
 
+    public List<String> getProductNames(){
+        for (WebElement productName : productNames) {
+            System.out.println(productName.getText());
+            names.add(productName.getText());
+        }
+        return names;
+    }
     public int calculateTotalPrice(){
         int sum = 0;
         for (WebElement price : prices) {
@@ -58,7 +69,7 @@ public class CartPage extends Base {
             if (TestData.productsToRemove.contains(productNames.get(i).getText())){
                 a.moveToElement(deleteButtons.get(i)).click().build().perform();
                 try {
-                    Thread.sleep(500);
+                    Thread.sleep(200);
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }

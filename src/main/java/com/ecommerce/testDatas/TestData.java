@@ -6,8 +6,8 @@ import java.util.List;
 
 
 public class TestData extends Base {
-    public static List<String> productsToAdd = List.of("IPHONE 13 PRO");
+    public static List<String> productsToAdd = List.of("ZARA COAT 3");
                                                      //"QWERTY","IPHONE 13 PRO", "BANARSI SAREE","ADIDAS ORIGINAL",
 
-    public static List<String> productsToRemove = List.of("IPHONE 13 PRO");
+    public static List<String> productsToRemove = List.of("ZARA COAT 3");
 }

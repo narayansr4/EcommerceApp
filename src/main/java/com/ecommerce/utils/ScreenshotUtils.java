@@ -1,6 +1,7 @@
 package com.ecommerce.utils;
 
 import com.ecommerce.base.Base;
+import com.ecommerce.driver.Driver;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.io.FileHandler;
@@ -19,7 +20,7 @@ public class ScreenshotUtils extends Base {
         String formattedDate = dateTime.format(formatter);
 
         String path = System.getProperty("user.dir") + "\\screenshots\\" + testcaseName + formattedDate + ".png";
-        TakesScreenshot sc = (TakesScreenshot)dr.get();
+        TakesScreenshot sc = (TakesScreenshot) Driver.getDriver();
         File img = sc.getScreenshotAs(OutputType.FILE);
 
         File destFile = new File(path);

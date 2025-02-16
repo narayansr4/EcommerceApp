@@ -3,7 +3,7 @@
 <suite name="Excel data - Register Users" >
     <test name="Register Users Test">
         <classes>
-            <class name="com.ecommerce.testCases.RegisterPageTest"/>
+            <class name="com.ecommerce.testCases.RegisterUserExcelTest"/>
         </classes>
     </test>
 </suite>
