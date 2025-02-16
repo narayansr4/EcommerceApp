@@ -43,8 +43,6 @@ public class HomePage extends Base {
                 //Utilities.visibilityOfElement(addToCartButtons.get(i));
                 js.executeScript("arguments[0].scrollIntoView(true);",addToCartButtons.get(i));
                 Utilities.visibilityOfElement(addToCartButtons.get(i));
-                // a.scrollToElement(addToCartButtons.get(i)).build().perform();
-                //a.moveToElement(addToCartButtons.get(i)).click().build().perform();
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {
@@ -60,11 +58,7 @@ public class HomePage extends Base {
             }
 
         }
-        //Utilities.visibilityOfElement(Utilities.cartBtn);
-        //js.executeScript("arguments[0].scrollIntoView(true);",Utilities.cartBtn);
 
-        //a.scrollToElement(Utilities.cartBtn).build().perform();
-        //a.moveToElement(Utilities.cartBtn).build().perform();
     }
 
     public void scrollToCartIcon(){
