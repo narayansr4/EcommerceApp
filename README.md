@@ -1,2 +1,18 @@
-Developed an end-to-end testing Selenium Automation Framework for an E-Commerce application using POM(Page Object Model) pattern.
-Extents Reports showing proper results are created after running every Test suite.
+# 🚀Automation Framework - Selenium + Java
+
+This is an automated testing framework built with **Java**, using **Selenium WebDriver** and **TestNG**.  
+It follows the **Page Object Model (POM)** design pattern for better readability and maintainability.
+
+---
+
+**Key Features**
+- **TestNG** framework for test management and assertions
+- **Page Object Model (POM)** to organize page interactions
+- **Extent reports** generated automatically after every test, with **screenshots** on failure
+
+---
+
+**Technologies Used**
+- Java
+- Selenium WebDriver
+- TestNG
